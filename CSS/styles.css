@@ -8,9 +8,7 @@
 
 html {
     font-size: 62.5%;
-    font-family: Krub,
-        Helvetica,
-        sans-serif;
+    font-family: Krub, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
@@ -58,7 +56,6 @@ body {
 }
 
 .contenedor {
-
     max-width: 120rem;
     margin: 0 auto;
 }
@@ -68,26 +65,19 @@ body {
 }
 
 .navegacion-principal {
-
-    /* padding: 1rem;*/
     display: flex;
-
     flex-direction: column;
-    
     justify-content: space-between;
     align-items: center;
     font-size: 2rem;
     font-weight: bold;
 }
 
-
-
 @media (min-width: 768px) {
     .navegacion-principal {
         flex-direction: row;
         justify-content: space-between;
     }
-
 }
 
 .navegacion-principal a:hover {
@@ -119,64 +109,81 @@ body {
     color: var(--blanco);
 }
 
-.ubicion{
+.ubicacion {
     display: flex;
     align-items: flex-end;
 }
-.boton{
+
+.boton {
     background-color: var(--secundario);
     color: var(--blanco);
-    padding-right:1rem 3rem;
+    padding: 1rem 3rem;
     margin-top: 3rem;
     font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: .5rem;
-    
     text-align: center;
 }
 
-@media (min-with: 768px){
- .boton{
-    width: auto;
- }
-}
-
-/* Mis servicios */
-
-@media (min-with: 768px){
-    .servicios{
-        display: grid;
-        /* define el area de las columna */
-       /* grid-template-columns: 1fr 1fr 1fr; con esto divide por fracción */
-       /*grid-template-columns:  33.33% 33.33% 33.33% ; por porcentajes*/ 
-       grid-template-columns: repeat(3, 1fr);
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
     }
 }
 
-.servicio{
+/* Mis servicios */
+.servicios {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    gap: 2rem;
+    padding: 2rem;
 }
-.servicio h3{
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+        gap: 2rem;
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.servicio h3 {
     color: var(--secundario);
     font-weight: normal;
+    margin-bottom: 1rem;
 }
 
-.servicio p{
-    line-height: 2;
-    text-align: center;
+.servicio p {
+    line-height: 1.6;
+    color: var(--gris);
 }
 
-.servicio .iconos{
+.servicio .iconos {
     height: 15rem;
     width: 15rem;
     background-color: var(--primario);
     border-radius: 50%;
     display: flex;
-    justify-content: space-evenly;/* espaciado unifoirme*/
+    justify-content: center;
     align-items: center;
-    
+    margin-bottom: 1.5rem;
+}
+
+.servicio .iconos svg {
+    width: 50%;
+    height: 50%;
+    fill: var(--blanco);
 }
