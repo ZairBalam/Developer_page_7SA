@@ -133,7 +133,7 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     border-radius: .5rem;
-    width: 90%;
+    
     text-align: center;
 }
 
@@ -141,4 +141,42 @@ body {
  .boton{
     width: auto;
  }
+}
+
+/* Mis servicios */
+
+@media (min-with: 768px){
+    .servicios{
+        display: grid;
+        /* define el area de las columna */
+       /* grid-template-columns: 1fr 1fr 1fr; con esto divide por fracción */
+       /*grid-template-columns:  33.33% 33.33% 33.33% ; por porcentajes*/ 
+       grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;/* espaciado unifoirme*/
+    align-items: center;
+    
 }
